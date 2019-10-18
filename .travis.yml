@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - "node"
+matrix:
+  include:
+  - name: "ЗАДАЧА-ПРИМЕР"
+    env: $TASK=00
+script: "if [[ -f if-${TASK}.js ]]; then npm test test/if-${TASK}_test.js; fi"
